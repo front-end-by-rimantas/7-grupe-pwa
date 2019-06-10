@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PWA</title>
+    <!-- <link rel="stylesheet" href="css/variables.css"> -->
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA">
+    <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png">
+    <meta name="description" content="Testuojame PWA">
+    <meta name="theme-color" content="#FF9933" />
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo"></a>
+        <nav>
+            <a href="/pages/services.html">Services</a>
+            <a href="/pages/about.html">About</a>
+            <a href="/pages/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    Intro to PWA
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque natus in minus vitae dolores voluptates, iusto at temporibus neque dignissimos libero reprehenderit exercitationem debitis, officia animi. Repellendus, modi eligendi?</p>
+
+    <a href="/offline.html">OFFLINE</a>
+
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((reg) => {
+                    console.log('Service worker registered.', reg);
+                });
+        });
+    }
+	</script>
+	<script src="js/home.js"></script>
+</body>
+</html>
